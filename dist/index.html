@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Mulish&family=Open+Sans&display=swap"
       rel="stylesheet"
@@ -15,12 +19,29 @@
       <h1 id="app-title" class="title-l">To-Donezo</h1>
     </header>
     <aside id="aside">
-      <h2 class="title-m">Yeehav</h2>
+      <h2 class="title-m">Projects</h2>
+
+      <div id="projects-adder" class="add-todo-item">
+        <input id="add-project-title" type="text" placeholder="Project title" />
+        <button id="add-project" class="btn">
+          <ion-icon class="icon-xs" name="add"></ion-icon>
+        </button>
+      </div>
+
+      <div class="todo-item project">
+        <p>Project 1</p>
+      </div>
+      <div class="todo-item project">
+        <p>Project 2</p>
+      </div>
+      <div class="todo-item project">
+        <p>Project 3</p>
+      </div>
       <!-- there can be list folders here later -->
     </aside>
     <main id="main">
       <div class="todos-column">
-        <h2 class="title-m">Todos</h2>
+        <h2 id="todos-title" class="title-m">Todos</h2>
         <div class="add-todo-item">
           <input
             id="add-title"
@@ -40,43 +61,27 @@
             </button>
           </div>
         </div>
-
-        <div class="todo-item">
-          <h3 class="title-s">Walk the dog</h3>
-          <div class="todo-right">
-            <h3 class="due-date">12-06-2021</h3>
-            <h3 class="priority">! ! !</h3>
-            <button class="btn">
-              <ion-icon class="icon-s" name="checkmark"></ion-icon>
-            </button>
-          </div>
-        </div>
-        <div class="todo-item">
-          <h3 class="title-s">Walk the dog</h3>
-          <div class="todo-right">
-            <h3 class="due-date">12-06-2021</h3>
-            <h3 class="priority">! ! !</h3>
-            <button class="btn">
-              <ion-icon class="icon-s" name="checkmark"></ion-icon>
-            </button>
-          </div>
-        </div>
-        <div class="todo-item">
-          <h3 class="title-s">Walk the dog</h3>
-          <div class="todo-right">
-            <h3 class="due-date">12-06-2021</h3>
-            <h3 class="priority">! ! !</h3>
-            <button class="btn">
-              <ion-icon class="icon-s" name="checkmark"></ion-icon>
-            </button>
-          </div>
-        </div>
       </div>
-      <div id="todos-info">
-        <h2 class="title-m">The Item</h2>
+      <div id="todo-info">
+        <h2 class="title-m">The Item Info</h2>
+        <textarea
+          class="title-s"
+          placeholder="Description..."
+          name="description"
+          id="description"
+          cols="30"
+          rows="6"
+        ></textarea>
+        <div class="buttons">
+          <button class="btn btn2">
+            <ion-icon class="icon-s" name="checkmark"></ion-icon>
+          </button>
+          <button class="btn btn2 btn-del">
+            <ion-icon class="icon-s" name="trash-outline"></ion-icon>
+          </button>
+        </div>
       </div>
     </main>
-    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>

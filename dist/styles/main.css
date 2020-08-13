@@ -4,6 +4,7 @@
   box-sizing: border-box; }
 
 body {
+  overflow-x: hidden;
   font-family: 'Mulish', Arial, Helvetica, sans-serif;
   background: #eef1ef; }
 
@@ -28,10 +29,24 @@ body {
     background: #b4dc7f;
     transform: scale(1.1); }
 
+.btn2 {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px; }
+
+.btn-del {
+  background-color: #db5461; }
+  .btn-del:hover {
+    background: #a62330;
+    color: #eef1ef; }
+  .btn-del:active {
+    background: #d02c3c; }
+
 .title-l {
   font-size: 3rem; }
 
 .title-m {
+  width: 100%;
   font-size: 2rem; }
 
 .title-s {
@@ -40,6 +55,18 @@ body {
 
 .icon-s {
   font-size: 1.75rem; }
+
+.icon-xs {
+  font-size: 1.5rem; }
+
+.project {
+  transition: all 0.2s ease;
+  cursor: pointer; }
+  .project:hover {
+    background-color: #1c2321;
+    color: #eef1ef;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px; }
 
 #header {
   z-index: 5;
@@ -52,7 +79,7 @@ body {
     margin: 0 0 0 125px; }
 
 #aside {
-  width: 120px;
+  width: 200px;
   background: #eef1ef;
   border-right: 1px solid #5e6572;
   position: absolute;
@@ -65,21 +92,27 @@ body {
     color: #1c2321;
     padding: 0.5rem 0; }
 
+.add-project button {
+  width: 30px;
+  height: 30px; }
+
 #main {
-  margin: 0 0 0 125px;
+  margin: 0 0 0 200px;
   padding: 60px 0 0 0;
   position: absolute;
   top: 0px;
-  height: 100vh;
+  height: 100%;
+  width: calc(100% - 205px);
   display: flex; }
   #main .title-m {
     display: inline-block; }
 
 .todos-column {
-  max-width: 700px; }
+  flex: 2;
+  max-width: 650px;
+  padding: 0 1rem; }
 
 .add-todo-item {
-  max-width: 700px;
   display: flex;
   margin: 0 0 1rem 0; }
   .add-todo-item input {
@@ -125,6 +158,8 @@ body {
   border-radius: 10px;
   padding: 0.25rem 1rem;
   margin: 0.5rem 0; }
+  .todo-item .btn:last-child {
+    margin-left: 1rem; }
 
 .todo-complete h3 {
   color: #c7c7c7;
@@ -139,14 +174,26 @@ body {
   display: flex;
   align-items: center; }
   .todo-right .due-date {
+    width: 140px;
     margin-right: 1rem; }
   .todo-right .priority {
     width: 30px;
     margin: 0 1rem; }
 
-#todos-info {
-  padding: 1rem;
-  margin-left: 1rem;
-  border-left: 1px solid #1c2321;
-  padding: 0px 1rem 1rem 1rem;
-  max-width: 750px; }
+#todo-info {
+  flex: 1;
+  max-width: 100%;
+  padding: 0 1rem 1rem 1rem;
+  border-left: 1px solid #1c2321; }
+  #todo-info textarea {
+    width: 100%;
+    font-family: 'Mulish', Arial, Helvetica, sans-serif;
+    border: none;
+    border: 1px solid #acacac;
+    border-radius: 10px;
+    outline: none;
+    padding: 0.25rem 1rem;
+    background-color: #eef1ef; }
+  #todo-info .buttons {
+    display: flex;
+    justify-content: space-between; }
